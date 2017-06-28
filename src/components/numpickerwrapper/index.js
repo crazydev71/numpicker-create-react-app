@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NumPicker from '../numpicker';
 import './numpickerwrapper.css';
 
-class NumPickerWrapper extends Component {
+/*class NumPickerWrapper extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {numbers:[4, 8, 16, 32, 64], isEditing: false};
@@ -49,6 +49,27 @@ class NumPickerWrapper extends Component {
 			</div>
 		);
 	}
+}*/
+
+class NumPickerWrapper extends Component {
+  state = {
+    num: 4,
+  };
+ 
+  render() {
+    return (
+      <div>
+        {this.state.num &&
+          <h1>You selected the number: {this.state.num}</h1>
+        }
+        <NumPicker
+          onChange={(val) => this.setState({ num: val })}
+          value={this.state.num}
+          options={[4, 8, 16, 32, 64]}
+        />
+      </div>
+    );
+  }
 }
 
 export default NumPickerWrapper;

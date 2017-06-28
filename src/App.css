@@ -21,6 +21,7 @@
 .App-content {
   background-image: url("https://miba.games/7046a12bda4d7a9588fd31dc5da736b1.jpg");
   min-height: 600px;
+  padding: 20px;
 }
 
 @keyframes App-logo-spin {
